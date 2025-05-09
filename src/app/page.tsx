@@ -1,11 +1,15 @@
-import Link from "next/link";
+import type { Metadata } from "next";
+import ProductList from "@/app/components/ProductList";
+
+export const metadata: Metadata = {
+  title: "Shopper - Products",
+  description: "Browser our products",
+};
 
 export default function Home() {
   return (
-    <div className="gap-y-10">
-      <Link href="/confirmation">Confirmation</Link>
-      <Link href="/summary">Summary</Link>
-      <Link href="/cart">Cart</Link>
-    </div>
+    <main className="container mx-auto px-4 py-8">
+      <ProductList />
+    </main>
   );
 }
