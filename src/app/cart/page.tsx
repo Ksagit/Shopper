@@ -1,14 +1,14 @@
 "use client";
 
-import { Cart } from "@/app/components/cart";
-import { useCart } from "@/app/components/cart-context";
+import { Cart } from "@/components/cart";
+import { useCart } from "@/components/cart-context";
 import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "E-commerce Store - Order Confirmation",
   description: "Your order has been confirmed",
-}
+};
 
 export default function CartPage() {
   const { cart } = useCart();

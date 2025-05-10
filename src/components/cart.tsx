@@ -1,6 +1,6 @@
 "use client";
 
-import { useCart } from "@/app/components/cart-context";
+import { useCart } from "@/components/cart-context";
 import Link from "next/link";
 
 export const Cart = () => {

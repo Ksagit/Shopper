@@ -1,4 +1,4 @@
-import { ProductList } from "@/app/components/product-list";
+import { ProductList } from "@/components/product-list";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

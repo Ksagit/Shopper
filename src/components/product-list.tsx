@@ -1,5 +1,5 @@
 "use client";
-import { useCart } from "@/app/components/cart-context";
+import { useCart } from "@/components/cart-context";
 import { products } from "@/data/products";
 import { toast } from "sonner";
 import Link from "next/link";
