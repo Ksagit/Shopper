@@ -36,4 +36,5 @@ Then open http://localhost:3000 in your browser to see the application.
 
 ## Rekrutacja
 Jakub_Kielaszek_Web_Wrocław  
-The UI of this project (ommiting commets) is written in Polish due to the proposed products list.
+The UI of this project (ommiting commets) is written in Polish due to the proposed products list.  
+Due to the lack of support for SSR on GitHub Pages (about which I did not know at the time of starting the project), the project has been deployed through Vercel.
