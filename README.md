@@ -1,6 +1,6 @@
 # Shopper
 Shopper is a next.js web application bootstraped with ```create-next-app```.  
-It is available at https://shopper-git-main-ksagits-projects.vercel.app
+It is available at https://shopper-ksagits-projects.vercel.app/
 
 ## Usage
 To run the project clone the repository with:
@@ -19,7 +19,7 @@ npm run dev
 ```
 Then open http://localhost:3000 in your browser to see the application.
 
-## Feautres
+## Features
 - Browse products from a catalog
 - Add and remove items from shopping cart
 - Adjust item quantities in cart
