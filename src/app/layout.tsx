@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/components/cart-context";
 import { Toaster } from "@/components/ui/sonner";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +26,9 @@ export default function RootLayout({
           <div className="min-h-screen">
             <header className="bg-white shadow-md">
               <div className="container mx-auto px-4 py-4">
-                <h1 className="text-2xl font-bold text-blue-600">Shopper</h1>
+                <Link href="/">
+                  <h1 className="text-2xl font-bold text-blue-600">Shopper</h1>
+                </Link>
               </div>
             </header>
             {children}
