@@ -2,10 +2,10 @@
 import { products } from "@/data/products";
 import Link from "next/link";
 
-export default function ProductList() {
+export const ProductList = () => {
   return (
     <>
-      <h1 className="text-3xl font-bold mb-8 text-center">Product List</h1>
+      <h1 className="text-3xl font-bold mb-8 text-center">Lista Produktów</h1>
       <div className="max-w-4xl mx-auto">
         <div className="mb-6 flex justify-end">
           <Link
@@ -31,7 +31,7 @@ export default function ProductList() {
                   </p>
                 </div>
                 <button
-                  onClick={() => alert("Added to cart")}
+                  onClick={() => alert("Dodano do koszyka")}
                   className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors"
                 >
                   Dodaj do koszyka
@@ -43,4 +43,4 @@ export default function ProductList() {
       </div>
     </>
   );
-}
+};

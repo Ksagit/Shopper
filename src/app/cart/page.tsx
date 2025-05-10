@@ -1,7 +1,9 @@
-export default function Cart() {
+import { Cart } from "@/app/components/cart";
+
+export default function CartPage() {
   return (
-    <div>
-      <h1>hi from Cart</h1>
-    </div>
+    <main className="container mx-auto px-4 py-8">
+      <Cart />
+    </main>
   );
 }
