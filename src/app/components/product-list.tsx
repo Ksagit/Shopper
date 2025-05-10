@@ -1,6 +1,7 @@
 "use client";
 import { useCart } from "@/app/components/cart-context";
 import { products } from "@/data/products";
+import { toast } from "sonner";
 import Link from "next/link";
 
 export const ProductList = () => {
@@ -34,7 +35,10 @@ export const ProductList = () => {
                   </p>
                 </div>
                 <button
-                  onClick={() => addToCart(product)}
+                  onClick={() => {
+                    addToCart(product);
+                    toast("Dodano do koszyka.");
+                  }}
                   className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors"
                 >
                   Dodaj do koszyka
