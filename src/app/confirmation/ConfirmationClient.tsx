@@ -1,6 +1,7 @@
 "use client";
 
 import { CartItem } from "@/data/products";
+import Link from "next/link";
 import { useEffect } from "react";
 
 export default function ConfirmationClient() {
@@ -59,8 +60,7 @@ export default function ConfirmationClient() {
           </div>
         </div>
         <div className="text-center">
-          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-          <a
+          <Link
             href="/"
             className="inline-block bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors"
             onClick={() => {
@@ -68,7 +68,7 @@ export default function ConfirmationClient() {
             }}
           >
             Powrót do listy produktów
-          </a>
+          </Link>
         </div>
       </div>
     </main>
