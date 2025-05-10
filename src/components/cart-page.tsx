@@ -3,11 +3,35 @@
 import { useCart } from "@/components/cart-context";
 import Link from "next/link";
 
-export const Cart = () => {
+export const CartPage = () => {
   const { cart, updateQuantity, removeFromCart, getCartTotal } = useCart();
 
   return (
     <div className="max-w-4xl mx-auto">
+      <div className="mb-6 flex justify-between max-w-4xl mx-auto">
+        <Link
+          href="/"
+          className="bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-colors"
+        >
+          Powrót do listy produktów
+        </Link>
+        <Link
+          href="/summary"
+          className={`bg-blue-600 text-white px-4 py-2 rounded-md transition-colors ${
+            cart.length === 0
+              ? "opacity-50 cursor-not-allowed"
+              : "hover:bg-blue-700"
+          }`}
+          aria-disabled={cart.length === 0}
+          onClick={(e) => {
+            if (cart.length === 0) {
+              e.preventDefault();
+            }
+          }}
+        >
+          Przejdź do podsumowania
+        </Link>
+      </div>
       {cart.length === 0 ? (
         <div className="bg-white p-8 rounded-lg shadow-md text-center">
           <p className="text-xl text-gray-600">Twój koszyk jest pusty</p>
@@ -57,7 +81,7 @@ export const Cart = () => {
                     <div className="text-gray-600">
                       {(item.price.main + item.price.fractional / 100).toFixed(
                         2
-                      )}{" "}
+                      )}
                       zł X {item.quantity}
                     </div>
                     <div className="font-bold">

@@ -12,6 +12,10 @@ interface CartContextType {
   getCartTotal: () => number;
 }
 
+// I would like to note that this is a potenital use-case for Redux.
+// I decided to stick with React Context due to the limited scope of this project.
+// This was a concious decision.
+
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export function CartProvider({ children }: { children: ReactNode }) {
